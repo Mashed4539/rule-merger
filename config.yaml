@@ -1,0 +1,114 @@
+- path: output/reject-domain.mrs
+  format: mrs
+  behavior: domain
+  upstream:
+    AdvertisingLite:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain_For_Clash.txt"
+      format: text
+      behavior: domain
+
+- path: output/direct-domain.mrs
+  format: mrs
+  behavior: domain
+  upstream:
+    private:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/private.list"
+      format: text
+      behavior: domain
+
+    apple-cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/apple-cn.mrs"
+      format: mrs
+      behavior: domain
+
+    microsoft-cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/microsoft-cn.mrs"
+      format: mrs
+      behavior: domain
+
+    google-cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/google-cn.mrs"
+      format: mrs
+      behavior: domain
+
+    games-cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/games-cn.mrs"
+      format: mrs
+      behavior: domain
+
+    ChinaMax-1:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/cn.mrs"
+      format: mrs
+      behavior: domain
+
+    bilibili:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/bilibili.mrs"
+      format: mrs
+      behavior: domain
+
+    tiktok:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/tiktok.mrs"
+      format: mrs
+      behavior: domain
+
+    ChinaTest:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaTest/ChinaTest_Domain_For_Clash.txt"
+      format: text
+      behavior: domain
+
+    ChinaMax-2:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Domain_For_Clash.txt"
+      format: text
+      behavior: domain
+
+- path: output/direct-ipcidr4-no-resolve.mrs
+  format: mrs
+  behavior: ipcidr
+  upstream:
+
+    privateip:
+      type: file
+      path: "local/lan@ip.yaml"
+      format: yaml
+      behavior: classical
+
+    cnv4-1:
+      type: http
+      url: "https://gaoyifan.github.io/china-operator-ip/china.txt"
+      format: text
+      behavior: ipcidr
+
+    cnv4-2:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_IP_No_IPv6.txt"
+      format: text
+      behavior: ipcidr
+
+    cnv-3:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_IP.txt"
+      format: text
+      behavior: ipcidr
+
+    cnv4-4:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPsTest/ChinaIPsTest_IP_No_IPv6.txt"
+      format: text
+      behavior: ipcidr
+
+    cnv4-5:
+      type: http
+      url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_IP_No_IPv6.txt"
+      format: text
+      behavior: ipcidr
