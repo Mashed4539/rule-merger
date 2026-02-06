@@ -12,6 +12,12 @@
   format: mrs
   behavior: domain
   upstream:
+    addition_direct:
+      type: file
+      path: "local/addition_direct@domain.txt"
+      format: text
+      behavior: domain
+
     private:
       type: http
       url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/private.list"
