@@ -121,6 +121,6 @@
 
     local-addition:
       type: file
-      path: "local/addition_cn@ip.yaml"
+      path: "local/addition_cn@ip.txt"
       format: text
       behavior: ipcidr
